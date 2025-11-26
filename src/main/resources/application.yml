@@ -12,7 +12,7 @@ spring:
   jpa:
     defer-datasource-initialization: true
     hibernate:
-      ddl-auto: create
+      ddl-auto: create # 애플리케이션이 실행될 때마다 기존 테이블을 다 삭제해버리고 새로 생성하겠다.
     properties:
       hibernate:
         format_sql: true
