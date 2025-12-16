@@ -5,7 +5,13 @@ spring:
     password: ${RDS_PASSWORD:portfolio1234}
     driver-class-name: com.mysql.cj.jdbc.Driver
     hikari:
-      maximum-pool-size: 100
+      maximum-pool-size: 10
+      minimum-idle: 5
+      connection-timeout: 30000
+      idle-timeout: 600000
+      max-lifetime: 1800000
+      leak-detection-threshold: 20000
+
   # // TODO: Named Lock 을 위해 아래 주석을 해제해야함
   #    hikari:
   #      maximum-pool-size: 64
